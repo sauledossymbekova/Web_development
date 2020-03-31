@@ -1,0 +1,38 @@
+<h1>Dossymbekova Saule 18BD110362</h1>
+  <div  id="products_word" *ngFor="let film of films">
+    {{film.categoryName}}
+  </div>
+ 
+
+<div class="products_block">
+
+  <div *ngFor="let film of films">
+   
+  <div class="product_div">
+    <h3>
+    <a routerLink="/films/{{film.id}}">
+       {{film.name}}
+    </a>
+  </h3>
+ 
+  <div class="main_image">
+<a href="{{film.originalLink}}"><img  src="{{film.images}}"></a><br>
+</div>
+
+<div class="rating_btn">
+  <span id="rating">{{film.rating}}</span>
+
+
+<img id="img" src="https://pngimg.com/uploads/star/star_PNG41472.png"> <br>
+
+<span id="price">{{film.price | currency}}</span> 
+
+<button> 
+  <a href = "https://api.whatsapp.com/send?phone=77079344712&text={{film.name     }}        {{film.originalLink}}"  style="color: white"> Share</a>
+
+</button>
+</div>
+</div>
+
+</div>  
+</div>

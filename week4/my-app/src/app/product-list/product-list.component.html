@@ -1,32 +1,43 @@
 <h2> Товары для животных</h2>
-
-<div  *ngFor="let product of products" class="body">
-
+<div  *ngFor="let product of products; index as productId" class="body"> <!-- directive to iterate in the list products-->
+  <!--*ngFor directive to assign each index in the products array to the productId variable when iterating over the list.-->
   <h3>
-    <a [title]="product.name + ' details'">
-      {{ product.name }}
+    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]"> <!--PROPERTY BINDING [ ] make each product name a link to product details, add the <a> element and set its title to be the product's name-->
+      {{ product.name }} <!--Interpolation renders a property's value as text-->
+      <!--product name anchor to include a routerLink.-->
     </a>
-  </h3 >
+    <!--Interpolation {{ }} lets you render the property value as text; property binding [ ] lets you use the property value in a template expression.-->
+  </h3>
+
     <a href="{{product.url}}"><img src="{{product.img}}"></a>
-  <p *ngIf="product.description">
+
+  <p *ngIf="product.description"> <!--*ngIf directive so that Angular !ONLY! creates the <p> element if the current product has a description.-->
     Description: {{ product.description }}
   </p>
+
   <img id="img" src="https://www.seaicons.com/wp-content/uploads/2016/09/Actions-rating-icon.png">
   <span id="rating">{{product.rating}}</span><br><br>
-  <button (click)="share()"> 
+
+  <button (click)="share()"> <!--() is for EVENT BINDING; event to the share() method (in product-list.component.ts)-->
     <a href = "https://api.whatsapp.com/send?phone=77472450969&text={{product.url}}"  style="color: white"> Share</a>
   </button>
-  <hr>
- 
+  <app-product-alerts 
+  [product] = "product" (notify) = "onNotify()"> 
+    <!--include new component, 
+    Pass the current product as input to the component using property binding. -->
+    <!-- bind the component(notify=eventEmitter) to the method in product-list - Event Binding-->
+  </app-product-alerts>
+
 </div>
 
-<h1>
-	Image Zoom</h1>
 
-<p>Mouse over the image:</p>
-
-<div class="img-zoom-container" (mouseenter)="imageZoom('myimage', 'myresult');">
-	<img id="myimage" src="https://user-images.githubusercontent.com/263237/36633897-d3237f2e-19ad-11e8-960a-daaf5ca3088a.png"
-	 width="300" height="240">
-	<div id="myresult" class="img-zoom-result"></div>
-</div>
+<!--*ngFor
+*ngIf
+Interpolation {{ }}
+Property binding [ ]
+Event binding ( )-->
+<!--The RouterLink directive gives the router control over the anchor element. 
+  In this case, the route, or URL, contains one fixed segment, 
+  /products, while the final segment is variable, 
+  inserting the id property of the current product. 
+  For example, the URL for a product with an id of 1 will be similar to https://getting-started-myfork.stackblitz.io/products/1.-->

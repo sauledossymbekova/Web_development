@@ -3,6 +3,7 @@ export const products = [
     url: 'https://aliexpress.ru/item/4000226002532.html?spm=a2g0o.tm75991.6611087790.2.79992df01TDtzZ&scm=1007.25281.150765.0&scm_id=1007.25281.150765.0&scm-url=1007.25281.150765.0&pvid=c8fc7bd5-fdaf-48bc-b7ac-80ea2f0150e4',
     img: 'https://ae01.alicdn.com/kf/H6c87dba463f74bf3bff9e95b3f2fb106W/Pet-Dog-Bed-Long-Plush-Super-Soft-Pet-Bed-Kennel-Round-Dog-House-Cat-Bed-For.jpg_220x220xz.jpg',
     name: 'Съемная кровать для собаки',
+    price: 750,
     description: 'плюшевая круглая пончик, кровати для домашних животных, питомник, Cusion, коврики для щенков, Удобный домашний диван для средних и больших собак, съемный',
     rating: 'Rating: 4.0'
   },

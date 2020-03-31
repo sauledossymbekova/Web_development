@@ -1,0 +1,10 @@
+<button id="btn_back" > 
+    <a id="word_back"routerLink="/categories/{{film.categoryId}}"> Back</a>
+  </button>
+<div class="main_image">
+ <img id="product_img" src="{{film.images}}">
+</div>
+<h2 class="product_name">Название: {{film.name}}</h2>
+<h2 class="product_description">Описание: {{film.description}}</h2>
+<button id="btn_buy" (click)="addToCart(film)">Buy</button>
+
