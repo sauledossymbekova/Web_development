@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "0ff5781d-8ec7-47da-aecb-8d1e7e60aa8f",
+		"name": "hh_back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/companies/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						""
+					]
+				},
+				"description": "All companies"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/vacancies/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vacancies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vacancies",
+						""
+					]
+				},
+				"description": "All vacancies"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/companies/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"2"
+					]
+				},
+				"description": "Companies by id "
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/vacancies/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vacancies/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vacancies",
+						"1"
+					]
+				},
+				"description": "Vacancies by id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/vacancies/top_ten/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vacancies/top_ten/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vacancies",
+						"top_ten",
+						""
+					]
+				},
+				"description": "Top ten vacancies ordered by salary"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
