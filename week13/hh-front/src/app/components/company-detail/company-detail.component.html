@@ -1,0 +1,10 @@
+<div *ngIf="company">
+  <p>{{company.id}}</p>
+  <p>{{company.name}}</p>
+  <p>{{company.city}}</p>
+
+  <div *ngFor="let vacancy of vacancies">
+    <a routerLink="/company/{{company.id}}/vacancies/{{vacancy.id}}">{{vacancy.name}}</a>
+    <button (click)="deleteVacancy(vacancy.id)" style="visibility: hidden">Delete vacancy</button>
+  </div>
+</div>

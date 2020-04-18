@@ -1,0 +1,5 @@
+login: testuser
+password: QWerTY!@10
+name: testUserName
+sirname: testUserSirName
+email: testuser@gmail.com
