@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "hh-front": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hh-front"
+    }
+  },
+  "defaultProject": "hh-front",
+  "cli": {
+    "analytics": "959ca683-27ea-459b-a18a-d542147757fc"
+  }
 }
